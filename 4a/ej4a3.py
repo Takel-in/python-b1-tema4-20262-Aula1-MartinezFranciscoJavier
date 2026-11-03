@@ -38,11 +38,29 @@ Exemple:
 
 def descending_list_iterator(numbers_list):
     # Write here your code
-    pass
+    # Generamos un iterador.
+    
+
+    # recorremos la lista y vamos comparando el actual con el resto de la lista.
+    # Si es menor intercambiamos de posición los números
+    for i in range(len(numbers_list)):
+        for j in range(i+1, len(numbers_list)):
+            if numbers_list[i] < numbers_list[j]:
+               aux = numbers_list[i]
+               numbers_list[i] = numbers_list[j] 
+               numbers_list[j] = aux
+
+    # Devolvemos la lista, pero nos obligan a que sea con un iterador.
+    return iter(numbers_list)
+
+    
+    
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# numeros = [2, 3, 6, 9, 11, 12, 15, 18]
-# print(list(descending_list_iterator(numeros)))  
+numeros = [2, 3, 6, 9, 11, 12, 15, 18]
+print(list(descending_list_iterator(numeros)))  
+

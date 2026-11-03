@@ -38,8 +38,15 @@ list_2 = [4, 5, 6, 7, 8]
 
 
 def find_intersection(list_1, list_2):
+
+    nueva_Lista = []
     # Write here your code
-    pass
+    for l1 in list_1:
+        if l1 in list_2:
+            nueva_Lista.append(l1)
+
+    return nueva_Lista
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
