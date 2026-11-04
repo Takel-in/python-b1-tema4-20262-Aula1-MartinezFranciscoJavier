@@ -103,4 +103,4 @@ def create_list(length_list):
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-print(create_list(6))
+# print(create_list(6))
