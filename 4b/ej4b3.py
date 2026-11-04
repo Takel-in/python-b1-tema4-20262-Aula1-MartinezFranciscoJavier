@@ -83,9 +83,24 @@ def create_list(length_list):
     """
 
     # Write here your code
-    pass
+    # Validamos el valor de entrado
+    if length_list < 0:
+        raise ValueError("The number must be positive")
+
+    # Creamos una lista con valores aleatorios
+    ram = []
+    for cnt in range(length_list):
+        ram.append(random.randint(0, 100))
+
+    # Copiamos la lista creada.
+    heap = copy.deepcopy(ram)
+
+    return (ram, heap)
+
+
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(create_list(6))
+print(create_list(6))
