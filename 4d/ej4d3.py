@@ -64,11 +64,12 @@ def read_and_write():
         # Comprobamos si los valores introducidos se ajustan al tipo esperado.
         if isinstance(name, str) or isinstance(int(age), int):
 
-            #Escribimos los valores en un 
+            #Escribimos los valores en un fichero
             with open("file.txt", 'w') as f:
                 f.write(name + "\n")
                 f.write(age)
 
+            #Leemos y mostramos el contenido del fichero.
             with open("file.txt", 'r') as f:
                 print(f.read())
 
