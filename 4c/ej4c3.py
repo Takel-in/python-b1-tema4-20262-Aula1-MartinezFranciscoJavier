@@ -86,10 +86,10 @@ class Shape:
 # Corret and overwrite class Triangle(Shape) here
 class Triangle(Shape):
     def __init__(self, sides, base, height):      
-        super().__init__(sides)
+        super().__init__(sides) #En la resuolución en vez de supe pone Shape. 
         self.base = base
         self.height = height
-        return
+        return # ESTO SOBRA.
 
     def get_area(self):
         return self.base * self.height / 2
