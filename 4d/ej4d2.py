@@ -38,10 +38,21 @@ Exemple:
 """
 def create_read_file():
     # Write here your code
-    pass
+
+    # Generamos el fichero y cargamos las tres líneas.
+    with open("text_file.txt",'w') as f:
+        f.writelines (input("Introduce un nombre: ") + '\n')
+        f.writelines (input("Introduce un apellido: ") + '\n')
+        f.writelines (input("Introduce la edad: "))
+
+    # Mostramos el texto completo del fichero.
+    with open("text_file.txt",'r') as f:
+        print(f.read())
+
+
 
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# create_read_file()
+create_read_file()

@@ -36,9 +36,28 @@ Exemple:
 
 def sum():
     # Write here your code
-    pass
+    # Mientras no intoeduzca dos números
+    while True:
+        val1 = input("Introduce el primer número: ")
+        val2 = input("Introduce el segundo número: ")
+
+        # Comprobamos que los números sean int.
+        # Si son realizamos la operación. En caso contrarios volvemos a solicitar los números.
+        try:
+            val1 = int(val1)
+            val2 = int(val2)
+
+            res = val1 + val2
+
+            print ("Result: ", res)
+            return val1 + val2
+        except ValueError:
+            print ("Unos de los valores no es numérico. vueve a probar")
+
+    
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# sum()
+#sum()

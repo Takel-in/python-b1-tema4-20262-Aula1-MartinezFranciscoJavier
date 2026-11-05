@@ -53,9 +53,33 @@ Exemple:
 
 def read_and_write():
     # Write here your code
-    pass
+
+
+
+    try:
+        # Introducimos los datos.
+        name = input("Introduce un nombre: ")
+        age = input("Introduce una edad: ")
+
+        # Comprobamos si los valores introducidos se ajustan al tipo esperado.
+        if isinstance(name, str) or isinstance(int(age), int):
+
+            #Escribimos los valores en un 
+            with open("file.txt", 'w') as f:
+                f.write(name + "\n")
+                f.write(age)
+
+            with open("file.txt", 'r') as f:
+                print(f.read())
+
+    except ValueError:
+        raise("ERROR. El nombre tiene que ser texto y la edad valor númerico. ")
+
+   
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# read_and_write()
+
+read_and_write()
